@@ -691,13 +691,13 @@ body {
   <div class="paper-texture"></div>
   <div class="paper-vignette"></div>
 
-  <!-- 🎵 音乐（Eason《致明日之舞》） -->
+  <!-- 🎵 婚礼音乐（Can't Help Falling in Love） -->
   <audio id="bgMusic" loop preload="auto" style="display:none;">
     <source src="music/wedding-song.mp3" type="audio/mpeg">
   </audio>
   <div class="music-player">
     <button class="music-btn" id="musicBtn" title="播放婚礼音乐">🎵</button>
-    <span class="music-label" id="musicLabel">致明日之舞</span>
+    <span class="music-label" id="musicLabel">Can't Help Falling in Love</span>
   </div>
 
   <!-- 🎨 主题切换 -->
@@ -1007,7 +1007,7 @@ body {
             </svg>
           </div>
           <p class="fav-label">婚礼歌曲</p>
-          <p class="fav-value">致明日之舞<br>Eason</p>
+          <p class="fav-value">Can't Help<br>Falling in Love</p>
         </div>
         <div class="fav-card">
           <div class="fav-icon" aria-hidden="true">
@@ -1221,7 +1221,7 @@ body {
     }
 
     function play() {
-      if (!hasSource()) { hint('请放入 music/wedding-song.mp3'); return; }
+      if (!hasSource()) { hint('请放入音乐文件'); return; }
       audio.play().then(function () {
         playing = true; btn.classList.add('playing'); btn.textContent = '🎶'; hint('正在播放 ♪');
       }).catch(function () { hint('点击播放婚礼音乐'); });
