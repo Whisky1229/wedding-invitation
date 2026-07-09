@@ -1248,10 +1248,10 @@ body {
       if (interacted) return;
       interacted = true;
       if (!hasSource()) return;
+      audio.currentTime = 40;  // 从40秒开始播放
       audio.play().then(function () {
         playing = true; btn.classList.add('playing'); btn.textContent = '🎶';
       }).catch(function () {
-        // If still blocked, keep trying on next interaction
         interacted = false;
       });
     }
