@@ -1206,7 +1206,7 @@ body {
 
     // 音频加载完立即设置起点为40秒
     audio.addEventListener('canplay', function () {
-      audio.currentTime = 40;
+      // file already trimmed from 40s
     });
     // 如果 seek 完成时还没在播放，保持位置
     audio.addEventListener('seeked', function () {
@@ -1235,7 +1235,7 @@ body {
 
     function play() {
       if (!hasSource()) { hint('请放入音乐文件'); return; }
-      audio.currentTime = 40;  // 每次播放都确保从40秒起
+      // file already trimmed from 40s  // 每次播放都确保从40秒起
       audio.play().then(function () {
         playing = true; btn.classList.add('playing'); btn.textContent = '🎶';
       }).catch(function () { hint('点击播放婚礼音乐'); });
@@ -1255,7 +1255,7 @@ body {
       if (interacted) return;
       interacted = true;
       if (!hasSource()) return;
-      audio.currentTime = 40;
+      // file already trimmed from 40s
       audio.play().then(function () {
         playing = true; btn.classList.add('playing'); btn.textContent = '🎶';
       }).catch(function () {
