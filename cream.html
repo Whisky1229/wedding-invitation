@@ -1196,12 +1196,25 @@ body {
 
     var playing = false;
     var interacted = false;
+    var seekReady = false;
     var defaultLabel = label ? label.textContent : '';
 
     if (label) {
       label.classList.add('show');
       setTimeout(function () { label.classList.remove('show'); }, 3000);
     }
+
+    // 音频加载完立即设置起点为40秒
+    audio.addEventListener('canplay', function () {
+      audio.currentTime = 40;
+    });
+    // 如果 seek 完成时还没在播放，保持位置
+    audio.addEventListener('seeked', function () {
+      if (!playing) {
+        seekReady = true;
+        audio.pause();
+      }
+    });
 
     function hasSource() {
       if (!audio) return false;
@@ -1222,8 +1235,9 @@ body {
 
     function play() {
       if (!hasSource()) { hint('请放入音乐文件'); return; }
+      audio.currentTime = 40;  // 每次播放都确保从40秒起
       audio.play().then(function () {
-        playing = true; btn.classList.add('playing'); btn.textContent = '🎶'; hint('正在播放 ♪');
+        playing = true; btn.classList.add('playing'); btn.textContent = '🎶';
       }).catch(function () { hint('点击播放婚礼音乐'); });
     }
 
@@ -1237,18 +1251,11 @@ body {
       if (playing) pause(); else play();
     });
 
-    function tryAuto() {
-      if (interacted) return;
-      if (!hasSource()) return;
-      // Touch alone not enough for autoplay on mobile. We need touchend/click.
-      // Don't consume 'interacted' yet - let the real click handle it.
-    }
-    // On mobile: touchend is the real user gesture. On desktop: click.
     function doPlay() {
       if (interacted) return;
       interacted = true;
       if (!hasSource()) return;
-      audio.currentTime = 40;  // 从40秒开始播放
+      audio.currentTime = 40;
       audio.play().then(function () {
         playing = true; btn.classList.add('playing'); btn.textContent = '🎶';
       }).catch(function () {
