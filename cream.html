@@ -1196,25 +1196,12 @@ body {
 
     var playing = false;
     var interacted = false;
-    var seekReady = false;
     var defaultLabel = label ? label.textContent : '';
 
     if (label) {
       label.classList.add('show');
       setTimeout(function () { label.classList.remove('show'); }, 3000);
     }
-
-    // 音频加载完立即设置起点为40秒
-    audio.addEventListener('canplay', function () {
-      // file already trimmed from 40s
-    });
-    // 如果 seek 完成时还没在播放，保持位置
-    audio.addEventListener('seeked', function () {
-      if (!playing) {
-        seekReady = true;
-        audio.pause();
-      }
-    });
 
     function hasSource() {
       if (!audio) return false;
@@ -1235,7 +1222,6 @@ body {
 
     function play() {
       if (!hasSource()) { hint('请放入音乐文件'); return; }
-      // file already trimmed from 40s  // 每次播放都确保从40秒起
       audio.play().then(function () {
         playing = true; btn.classList.add('playing'); btn.textContent = '🎶';
       }).catch(function () { hint('点击播放婚礼音乐'); });
