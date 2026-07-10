@@ -9,7 +9,6 @@
       stroke: rgba(90,58,110,0.4);
       stroke-width: 0.8;
       stroke-linejoin: round;
-      transition: stroke 0.3s;
     }
   </style>
 
@@ -182,44 +181,42 @@
 
   <!-- City markers -->
   <g id="city-markers">
-  <circle cx="356" cy="216" r="4.5" fill="#C7407F" stroke="#5A3A6E" stroke-width="1.5" opacity="0.9"/>
-  <circle cx="356" cy="216" r="7" fill="none" stroke="#C7407F" stroke-width="0.6" opacity="0.35"/>
-  <circle cx="406" cy="226" r="4.5" fill="#C7407F" stroke="#5A3A6E" stroke-width="1.5" opacity="0.9"/>
-  <circle cx="406" cy="226" r="7" fill="none" stroke="#C7407F" stroke-width="0.6" opacity="0.35"/>
-  <circle cx="522" cy="344" r="4.5" fill="#C7407F" stroke="#5A3A6E" stroke-width="1.5" opacity="0.9"/>
-  <circle cx="522" cy="344" r="7" fill="none" stroke="#C7407F" stroke-width="0.6" opacity="0.35"/>
-  <circle cx="622" cy="358" r="4.5" fill="#C7407F" stroke="#5A3A6E" stroke-width="1.5" opacity="0.9"/>
-  <circle cx="622" cy="358" r="7" fill="none" stroke="#C7407F" stroke-width="0.6" opacity="0.35"/>
-  <circle cx="602" cy="378" r="4.5" fill="#C7407F" stroke="#5A3A6E" stroke-width="1.5" opacity="0.9"/>
-  <circle cx="602" cy="378" r="7" fill="none" stroke="#C7407F" stroke-width="0.6" opacity="0.35"/>
-  <circle cx="594" cy="371" r="4.5" fill="#C7407F" stroke="#5A3A6E" stroke-width="1.5" opacity="0.9"/>
-  <circle cx="594" cy="371" r="7" fill="none" stroke="#C7407F" stroke-width="0.6" opacity="0.35"/>
-  <circle cx="582" cy="428" r="4.5" fill="#C7407F" stroke="#5A3A6E" stroke-width="1.5" opacity="0.9"/>
-  <circle cx="582" cy="428" r="7" fill="none" stroke="#C7407F" stroke-width="0.6" opacity="0.35"/>
-  <circle cx="572" cy="446" r="4.5" fill="#C7407F" stroke="#5A3A6E" stroke-width="1.5" opacity="0.9"/>
-  <circle cx="572" cy="446" r="7" fill="none" stroke="#C7407F" stroke-width="0.6" opacity="0.35"/>
-  <circle cx="558" cy="460" r="4.5" fill="#C7407F" stroke="#5A3A6E" stroke-width="1.5" opacity="0.9"/>
-  <circle cx="558" cy="460" r="7" fill="none" stroke="#C7407F" stroke-width="0.6" opacity="0.35"/>
-  <!-- 💍 惠州 - 钻戒 --><g transform="translate(540,468)"><path d="M 0,2 L -5,10 A 6,6 0 0,0 5,10 Z" fill="#C99A2E" stroke="#5A3A6E" stroke-width="1.2" opacity="0.9"/><circle cx="0" cy="0" r="2.5" fill="#5A3A6E" opacity="0.9"/></g>
-  <circle cx="474" cy="548" r="4.5" fill="#C7407F" stroke="#5A3A6E" stroke-width="1.5" opacity="0.9"/>
-  <circle cx="474" cy="548" r="7" fill="none" stroke="#C7407F" stroke-width="0.6" opacity="0.35"/>
+  <circle cx="344" cy="325" r="4.5" fill="#C7407F" stroke="#5A3A6E" stroke-width="1.5" opacity="0.9"/>
+  <circle cx="344" cy="325" r="7" fill="none" stroke="#C7407F" stroke-width="0.6" opacity="0.35"/>
+  <circle cx="372" cy="332" r="4.5" fill="#C7407F" stroke="#5A3A6E" stroke-width="1.5" opacity="0.9"/>
+  <circle cx="372" cy="332" r="7" fill="none" stroke="#C7407F" stroke-width="0.6" opacity="0.35"/>
+  <circle cx="518" cy="409" r="4.5" fill="#C7407F" stroke="#5A3A6E" stroke-width="1.5" opacity="0.9"/>
+  <circle cx="518" cy="409" r="7" fill="none" stroke="#C7407F" stroke-width="0.6" opacity="0.35"/>
+  <circle cx="618" cy="400" r="4.5" fill="#C7407F" stroke="#5A3A6E" stroke-width="1.5" opacity="0.9"/>
+  <circle cx="618" cy="400" r="7" fill="none" stroke="#C7407F" stroke-width="0.6" opacity="0.35"/>
+  <circle cx="600" cy="413" r="4.5" fill="#C7407F" stroke="#5A3A6E" stroke-width="1.5" opacity="0.9"/>
+  <circle cx="600" cy="413" r="7" fill="none" stroke="#C7407F" stroke-width="0.6" opacity="0.35"/>
+  <circle cx="593" cy="409" r="4.5" fill="#C7407F" stroke="#5A3A6E" stroke-width="1.5" opacity="0.9"/>
+  <circle cx="593" cy="409" r="7" fill="none" stroke="#C7407F" stroke-width="0.6" opacity="0.35"/>
+  <circle cx="587" cy="472" r="4.5" fill="#C7407F" stroke="#5A3A6E" stroke-width="1.5" opacity="0.9"/>
+  <circle cx="587" cy="472" r="7" fill="none" stroke="#C7407F" stroke-width="0.6" opacity="0.35"/>
+  <circle cx="571" cy="494" r="4.5" fill="#C7407F" stroke="#5A3A6E" stroke-width="1.5" opacity="0.9"/>
+  <circle cx="571" cy="494" r="7" fill="none" stroke="#C7407F" stroke-width="0.6" opacity="0.35"/>
+  <circle cx="551" cy="509" r="4.5" fill="#C7407F" stroke="#5A3A6E" stroke-width="1.5" opacity="0.9"/>
+  <circle cx="551" cy="509" r="7" fill="none" stroke="#C7407F" stroke-width="0.6" opacity="0.35"/>
+  <!-- 💍 惠州 - 钻戒 --><g transform="translate(519,508)"><path d="M 0,2 L -5,10 A 6,6 0 0,0 5,10 Z" fill="#C99A2E" stroke="#5A3A6E" stroke-width="1.2" opacity="0.9"/><circle cx="0" cy="0" r="2.5" fill="#5A3A6E" opacity="0.9"/></g>
+  <circle cx="470" cy="558" r="4.5" fill="#C7407F" stroke="#5A3A6E" stroke-width="1.5" opacity="0.9"/>
+  <circle cx="470" cy="558" r="7" fill="none" stroke="#C7407F" stroke-width="0.6" opacity="0.35"/>
   </g>
 
   <!-- City labels -->
   <g id="city-labels">
-  <text x="344" y="220" fill="#5A3A6E" font-family="PingFang SC, Heiti SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="600" text-anchor="end" letter-spacing="1.5">西宁</text>
-  <text x="418" y="230" fill="#5A3A6E" font-family="PingFang SC, Heiti SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="600" text-anchor="start" letter-spacing="1.5">兰州</text>
-  <text x="534" y="348" fill="#5A3A6E" font-family="PingFang SC, Heiti SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="600" text-anchor="start" letter-spacing="1.5">武汉</text>
-  <text x="634" y="362" fill="#5A3A6E" font-family="PingFang SC, Heiti SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="600" text-anchor="start" letter-spacing="1.5">上海</text>
-  <text x="614" y="382" fill="#5A3A6E" font-family="PingFang SC, Heiti SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="600" text-anchor="start" letter-spacing="1.5">杭州</text>
-  <text x="582" y="375" fill="#5A3A6E" font-family="PingFang SC, Heiti SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="600" text-anchor="end" letter-spacing="1.5">安吉</text>
-  <text x="594" y="432" fill="#5A3A6E" font-family="PingFang SC, Heiti SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="600" text-anchor="start" letter-spacing="1.5">福州</text>
-  <text x="584" y="450" fill="#5A3A6E" font-family="PingFang SC, Heiti SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="600" text-anchor="start" letter-spacing="1.5">厦门</text>
-  <text x="570" y="452" fill="#5A3A6E" font-family="PingFang SC, Heiti SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="600" text-anchor="start" letter-spacing="1.5">潮汕</text>
-  <text x="552" y="484" fill="#5A3A6E" font-family="PingFang SC, Heiti SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="600" text-anchor="start" letter-spacing="1.5">惠州</text>
-  <text x="486" y="552" fill="#5A3A6E" font-family="PingFang SC, Heiti SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="600" text-anchor="start" letter-spacing="1.5">三亚</text>
+  <text x="332" y="329" fill="#5A3A6E" font-family="PingFang SC, Heiti SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="600" text-anchor="end" letter-spacing="1.5">西宁</text>
+  <text x="360" y="336" fill="#5A3A6E" font-family="PingFang SC, Heiti SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="600" text-anchor="end" letter-spacing="1.5">兰州</text>
+  <text x="530" y="413" fill="#5A3A6E" font-family="PingFang SC, Heiti SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="600" text-anchor="start" letter-spacing="1.5">武汉</text>
+  <text x="630" y="404" fill="#5A3A6E" font-family="PingFang SC, Heiti SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="600" text-anchor="start" letter-spacing="1.5">上海</text>
+  <text x="612" y="417" fill="#5A3A6E" font-family="PingFang SC, Heiti SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="600" text-anchor="start" letter-spacing="1.5">杭州</text>
+  <text x="581" y="407" fill="#5A3A6E" font-family="PingFang SC, Heiti SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="600" text-anchor="end" letter-spacing="1.5">安吉</text>
+  <text x="599" y="476" fill="#5A3A6E" font-family="PingFang SC, Heiti SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="600" text-anchor="start" letter-spacing="1.5">福州</text>
+  <text x="583" y="498" fill="#5A3A6E" font-family="PingFang SC, Heiti SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="600" text-anchor="start" letter-spacing="1.5">厦门</text>
+  <text x="565" y="501" fill="#5A3A6E" font-family="PingFang SC, Heiti SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="600" text-anchor="start" letter-spacing="1.5">潮汕</text>
+  <text x="531" y="524" fill="#5A3A6E" font-family="PingFang SC, Heiti SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="600" text-anchor="start" letter-spacing="1.5">惠州</text>
+  <text x="470" y="572" fill="#5A3A6E" font-family="PingFang SC, Heiti SC, Microsoft YaHei, sans-serif" font-size="12" font-weight="600" text-anchor="start" letter-spacing="1.5">三亚</text>
   </g>
 
-  <!-- 💍 Legend -->
-  <g id="legend-ring" transform="translate(20, 525)"><rect x="0" y="0" width="130" height="30" rx="6" fill="rgba(243,234,218,0.85)" opacity="0.8"/><path d="M 16,6 L 13,12 A 3.5,3.5 0 0,0 21,12 Z" fill="#C99A2E" stroke="#5A3A6E" stroke-width="1" opacity="0.9"/><circle cx="17" cy="4" r="1.5" fill="#5A3A6E" opacity="0.9"/><text x="28" y="19" fill="#5A3A6E" font-family="PingFang SC, Heiti SC, Microsoft YaHei, sans-serif" font-size="11">💍 求婚地 · 惠州</text></g>
 </svg>
