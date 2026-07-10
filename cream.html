@@ -613,39 +613,67 @@ body {
   color: var(--ink); line-height: 1.6;
 }
 
-/* --- 照片墙（2×3 网格，倾斜错落，松弛拍立得感） --- */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px 18px;
-  padding: 14px 6px;
+/* --- 照片书（堆叠书本风格 · Stacked Photo Book） --- */
+.stacked-book {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.gallery .photo {
-  aspect-ratio: 3 / 4;
-  border: 4px solid var(--frame-mat);
-  border-radius: 3px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
-  transition: transform var(--transition), box-shadow var(--transition);
+.stacked-book .book-photo {
+  position: absolute;
+  width: 72%;
+  max-width: 260px;
+  background: #fff;
+  padding: 7px 7px 32px 7px;
+  border-radius: 2px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18), 0 1px 3px rgba(0,0,0,0.10);
+  transition: transform 0.45s cubic-bezier(0.25,0.46,0.45,0.94),
+              box-shadow 0.45s ease;
+  cursor: pointer;
   will-change: transform;
 }
-/* 每张不同的倾斜 + 上下左右错落（大幅随机，无规律） */
-.gallery .photo:nth-child(1) { transform: rotate(-6deg) translate(6px, 10px); }
-.gallery .photo:nth-child(2) { transform: rotate(4.5deg) translate(-7px, -4px); }
-.gallery .photo:nth-child(3) { transform: rotate(1deg) translate(3px, 12px); }
-.gallery .photo:nth-child(4) { transform: rotate(-3.5deg) translate(-4px, -11px); }
-.gallery .photo:nth-child(5) { transform: rotate(6.5deg) translate(8px, 5px); }
-.gallery .photo:nth-child(6) { transform: rotate(-2deg) translate(-6px, -7px); }
-/* 悬停扶正、微微放大 */
-.gallery .photo:hover {
-  transform: rotate(0deg) translateY(0) scale(1.04);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
-  z-index: 3;
+.stacked-book .book-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 1px;
 }
-.gallery .full { grid-column: 1 / -1; aspect-ratio: 3 / 2; }
-/* 横跨整行 + 保持原比例（不裁剪） */
-.gallery .full-natural { grid-column: 1 / -1; }
-.gallery .full-natural { aspect-ratio: auto; }
-.gallery .full-natural img { aspect-ratio: auto; height: auto; }
+/* Each photo gets a unique rotation & offset — casually stacked pile */
+.stacked-book .book-photo:nth-child(1)  { transform: rotate(-8deg) translate(-8px, -4px); z-index: 1; }
+.stacked-book .book-photo:nth-child(2)  { transform: rotate(5deg) translate(6px, -2px); z-index: 2; }
+.stacked-book .book-photo:nth-child(3)  { transform: rotate(-4deg) translate(-10px, 6px); z-index: 3; }
+.stacked-book .book-photo:nth-child(4)  { transform: rotate(7deg) translate(4px, -8px); z-index: 4; }
+.stacked-book .book-photo:nth-child(5)  { transform: rotate(-6deg) translate(-4px, 10px); z-index: 5; }
+.stacked-book .book-photo:nth-child(6)  { transform: rotate(3deg) translate(10px, 4px); z-index: 6; }
+.stacked-book .book-photo:nth-child(7)  { transform: rotate(-5deg) translate(-12px, -6px); z-index: 7; }
+.stacked-book .book-photo:nth-child(8)  { transform: rotate(8deg) translate(8px, 8px); z-index: 8; }
+.stacked-book .book-photo:nth-child(9)  { transform: rotate(-3deg) translate(-6px, -10px); z-index: 9; }
+.stacked-book .book-photo:nth-child(10) { transform: rotate(6deg) translate(-2px, 12px); z-index: 10; }
+.stacked-book .book-photo:nth-child(11) { transform: rotate(-7deg) translate(12px, -2px); z-index: 11; }
+.stacked-book .book-photo:nth-child(12) { transform: rotate(2deg) translate(2px, 6px); z-index: 12; }
+
+/* Hover: photo rises to top, straightened */
+.stacked-book .book-photo:hover {
+  transform: rotate(0deg) translate(0, -8px) scale(1.06) !important;
+  box-shadow: 0 16px 36px rgba(0,0,0,0.28), 0 2px 6px rgba(0,0,0,0.12);
+  z-index: 99 !important;
+}
+
+@media (min-width: 768px) {
+  .stacked-book {
+    max-width: 440px;
+    min-height: 560px;
+  }
+  .stacked-book .book-photo {
+    max-width: 280px;
+    padding: 8px 8px 36px 8px;
+  }
+}
 
 /* --- 结尾金相框大图（保持原比例，宽度与下方 block 一致） --- */
 .closing-frame {
@@ -975,13 +1003,19 @@ body {
     <div class="section-inner reveal">
       <h3 class="section-heading">Our Moments</h3>
       <p class="section-heading-cn">我们的瞬间</p>
-      <div class="gallery">
-        <div class="photo"><img src="photos/微信图片_20260705154405_16567_7.jpg" alt="婚纱照" loading="lazy"></div>
-        <div class="photo"><img src="photos/微信图片_20260705154409_16568_7.jpg" alt="婚纱照" loading="lazy"></div>
-        <div class="photo"><img src="photos/微信图片_20260705154105_16560_7.jpg" alt="婚纱照" loading="lazy"></div>
-        <div class="photo"><img src="photos/微信图片_20260705153856_16541_7.jpg" alt="婚纱照" loading="lazy"></div>
-        <div class="photo"><img src="photos/微信图片_20260705153900_16542_7.jpg" alt="婚纱照" loading="lazy"></div>
-        <div class="photo"><img src="photos/微信图片_20260705154031_16553_7.jpg" alt="婚纱照" loading="lazy"></div>
+      <div class="stacked-book">
+        <div class="book-photo"><img src="photos/微信图片_20260705154415_16570_7.jpg" alt="婚纱照" loading="lazy"></div>
+        <div class="book-photo"><img src="photos/微信图片_20260705154405_16567_7.jpg" alt="婚纱照" loading="lazy"></div>
+        <div class="book-photo"><img src="photos/微信图片_20260705154409_16568_7.jpg" alt="婚纱照" loading="lazy"></div>
+        <div class="book-photo"><img src="photos/微信图片_20260705154105_16560_7.jpg" alt="婚纱照" loading="lazy"></div>
+        <div class="book-photo"><img src="photos/微信图片_20260705153856_16541_7.jpg" alt="婚纱照" loading="lazy"></div>
+        <div class="book-photo"><img src="photos/微信图片_20260705153900_16542_7.jpg" alt="婚纱照" loading="lazy"></div>
+        <div class="book-photo"><img src="photos/微信图片_20260705154031_16553_7.jpg" alt="婚纱照" loading="lazy"></div>
+        <div class="book-photo"><img src="photos/微信图片_20260705154035_16555_7.jpg" alt="婚纱照" loading="lazy"></div>
+        <div class="book-photo"><img src="photos/微信图片_20260705154046_16557_7.jpg" alt="婚纱照" loading="lazy"></div>
+        <div class="book-photo"><img src="photos/微信图片_20260705154056_16558_7.jpg" alt="婚纱照" loading="lazy"></div>
+        <div class="book-photo"><img src="photos/微信图片_20260705154353_16562_7.jpg" alt="婚纱照" loading="lazy"></div>
+        <div class="book-photo"><img src="photos/微信图片_20260705154424_16573_7.jpg" alt="婚纱照" loading="lazy"></div>
       </div>
     </div>
   </section>
