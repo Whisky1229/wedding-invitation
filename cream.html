@@ -655,7 +655,14 @@ body {
 .stacked-book .book-photo:nth-child(9)  { transform: rotate(-3deg) translate(-6px, -10px); z-index: 9; }
 .stacked-book .book-photo:nth-child(10) { transform: rotate(6deg) translate(-2px, 12px); z-index: 10; }
 .stacked-book .book-photo:nth-child(11) { transform: rotate(-7deg) translate(12px, -2px); z-index: 11; }
-.stacked-book .book-photo:nth-child(12) { transform: rotate(2deg) translate(2px, 6px); z-index: 12; }
+.stacked-book .book-photo:nth-child(12) { display: none; }  /* max 10 photos */
+
+/* Landscape photos take more width */
+.stacked-book .book-photo.landscape {
+  width: 88%;
+  max-width: 310px;
+  padding: 6px 6px 26px 6px;
+}
 
 /* Current photo: on top, straight, fully visible */
 .stacked-book .book-photo.current {
@@ -1061,7 +1068,6 @@ body {
       <h3 class="section-heading">Our Moments</h3>
       <p class="section-heading-cn">我们的瞬间</p>
       <div class="stacked-book">
-        <div class="book-photo"><img src="photos/微信图片_20260705154415_16570_7.jpg" alt="婚纱照" loading="lazy"></div>
         <div class="book-photo"><img src="photos/微信图片_20260705154405_16567_7.jpg" alt="婚纱照" loading="lazy"></div>
         <div class="book-photo"><img src="photos/微信图片_20260705154409_16568_7.jpg" alt="婚纱照" loading="lazy"></div>
         <div class="book-photo"><img src="photos/微信图片_20260705154105_16560_7.jpg" alt="婚纱照" loading="lazy"></div>
@@ -1071,7 +1077,6 @@ body {
         <div class="book-photo"><img src="photos/微信图片_20260705154035_16555_7.jpg" alt="婚纱照" loading="lazy"></div>
         <div class="book-photo"><img src="photos/微信图片_20260705154046_16557_7.jpg" alt="婚纱照" loading="lazy"></div>
         <div class="book-photo"><img src="photos/微信图片_20260705154056_16558_7.jpg" alt="婚纱照" loading="lazy"></div>
-        <div class="book-photo"><img src="photos/微信图片_20260705154353_16562_7.jpg" alt="婚纱照" loading="lazy"></div>
         <div class="book-photo"><img src="photos/微信图片_20260705154424_16573_7.jpg" alt="婚纱照" loading="lazy"></div>
       </div>
     </div>
@@ -1285,8 +1290,21 @@ body {
 
       var currentIdx = 0;
 
-      // Set first photo as current
+      // Detect landscape photos & set first as current
+      photos.forEach(function (photo) {
+        var img = photo.querySelector('img');
+        if (img) {
+          if (img.complete) checkLandscape(img, photo);
+          else img.addEventListener('load', function () { checkLandscape(img, photo); });
+        }
+      });
       photos[0].classList.add('current');
+
+      function checkLandscape(img, photo) {
+        if (img.naturalWidth > img.naturalHeight * 1.15) {
+          photo.classList.add('landscape');
+        }
+      }
 
       // Build dot indicators
       var dots = document.createElement('div');
