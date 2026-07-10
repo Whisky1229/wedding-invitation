@@ -171,18 +171,18 @@
 	/>
   </g>
   <g id="routes">
-<path d="M500,438 Q654,273 594,55" fill="none" stroke="rgba(240,201,75,0.55)" stroke-width="2" stroke-dasharray="7,5" stroke-linecap="round" opacity="0.7"/>
-<path d="M500,438 Q457,331 344,312" fill="none" stroke="rgba(240,201,75,0.55)" stroke-width="2" stroke-dasharray="7,5" stroke-linecap="round" opacity="0.7"/>
-<path d="M500,438 Q469,343 372,320" fill="none" stroke="rgba(240,201,75,0.55)" stroke-width="2" stroke-dasharray="7,5" stroke-linecap="round" opacity="0.7"/>
-<path d="M500,438 Q519,426 518,404" fill="none" stroke="rgba(240,201,75,0.55)" stroke-width="2" stroke-dasharray="7,5" stroke-linecap="round" opacity="0.7"/>
-<path d="M500,438 Q571,450 618,395" fill="none" stroke="rgba(240,201,75,0.55)" stroke-width="2" stroke-dasharray="7,5" stroke-linecap="round" opacity="0.7"/>
-<path d="M500,438 Q558,451 600,408" fill="none" stroke="rgba(240,201,75,0.55)" stroke-width="2" stroke-dasharray="7,5" stroke-linecap="round" opacity="0.7"/>
-<path d="M500,438 Q556,447 593,404" fill="none" stroke="rgba(240,201,75,0.55)" stroke-width="2" stroke-dasharray="7,5" stroke-linecap="round" opacity="0.7"/>
-<path d="M500,438 Q536,476 587,466" fill="none" stroke="rgba(240,201,75,0.55)" stroke-width="2" stroke-dasharray="7,5" stroke-linecap="round" opacity="0.7"/>
-<path d="M500,438 Q522,482 571,487" fill="none" stroke="rgba(240,201,75,0.55)" stroke-width="2" stroke-dasharray="7,5" stroke-linecap="round" opacity="0.7"/>
-<path d="M500,438 Q508,484 551,501" fill="none" stroke="rgba(240,201,75,0.55)" stroke-width="2" stroke-dasharray="7,5" stroke-linecap="round" opacity="0.7"/>
-<path d="M500,438 Q491,476 519,504" fill="none" stroke="rgba(240,201,75,0.55)" stroke-width="2" stroke-dasharray="7,5" stroke-linecap="round" opacity="0.7"/>
-<path d="M500,438 Q443,483 451,555" fill="none" stroke="rgba(240,201,75,0.55)" stroke-width="2" stroke-dasharray="7,5" stroke-linecap="round" opacity="0.7"/>
+<path d="M500,438 C475,229 444,221 594,55" fill="none" stroke="rgba(240,201,75,0.55)" stroke-width="2" stroke-dasharray="7,5" stroke-linecap="round" opacity="0.7"/>
+<path d="M500,438 Q403,398 344,312" fill="none" stroke="rgba(240,201,75,0.55)" stroke-width="2" stroke-dasharray="7,5" stroke-linecap="round" opacity="0.7"/>
+<path d="M500,438 Q399,419 372,320" fill="none" stroke="rgba(240,201,75,0.55)" stroke-width="2" stroke-dasharray="7,5" stroke-linecap="round" opacity="0.7"/>
+<path d="M500,438 Q517,425 518,404" fill="none" stroke="rgba(240,201,75,0.55)" stroke-width="2" stroke-dasharray="7,5" stroke-linecap="round" opacity="0.7"/>
+<path d="M500,438 C571,449 576,463 618,395" fill="none" stroke="rgba(240,201,75,0.55)" stroke-width="2" stroke-dasharray="7,5" stroke-linecap="round" opacity="0.7"/>
+<path d="M500,438 Q558,450 600,408" fill="none" stroke="rgba(240,201,75,0.55)" stroke-width="2" stroke-dasharray="7,5" stroke-linecap="round" opacity="0.7"/>
+<path d="M500,438 Q540,403 593,404" fill="none" stroke="rgba(240,201,75,0.55)" stroke-width="2" stroke-dasharray="7,5" stroke-linecap="round" opacity="0.7"/>
+<path d="M500,438 Q553,422 587,466" fill="none" stroke="rgba(240,201,75,0.55)" stroke-width="2" stroke-dasharray="7,5" stroke-linecap="round" opacity="0.7"/>
+<path d="M500,438 C543,451 547,446 571,487" fill="none" stroke="rgba(240,201,75,0.55)" stroke-width="2" stroke-dasharray="7,5" stroke-linecap="round" opacity="0.7"/>
+<path d="M500,438 C519,475 516,477 551,501" fill="none" stroke="rgba(240,201,75,0.55)" stroke-width="2" stroke-dasharray="7,5" stroke-linecap="round" opacity="0.7"/>
+<path d="M500,438 Q489,477 519,504" fill="none" stroke="rgba(240,201,75,0.55)" stroke-width="2" stroke-dasharray="7,5" stroke-linecap="round" opacity="0.7"/>
+<path d="M500,438 Q453,487 451,555" fill="none" stroke="rgba(240,201,75,0.55)" stroke-width="2" stroke-dasharray="7,5" stroke-linecap="round" opacity="0.7"/>
   </g>
   <g id="markers">
 <g transform="translate(594,55)"><path d="M0,5 C-5,0 -8,-4 -8,-7 A4,4 0 0,1 -4,-9 C-1.5,-8 0,-4 0,-4 C0,-4 1.5,-8 4,-9 A4,4 0 0,1 8,-7 C8,-4 5,0 0,5 Z" fill="#F0C94B" stroke="#FBF6EE" stroke-width="1.2" opacity="0.9"/></g>
