@@ -192,8 +192,8 @@ body {
 
 .doodle svg { display: block; width: 100%; height: 100%; }
 
-/* 线描路径统一色 */
-.doodle .stroke {
+/* 线描路径统一色（全局适用） */
+.stroke, .doodle .stroke {
   fill: none;
   stroke: var(--line-color);
   stroke-width: 2.4;
@@ -201,7 +201,7 @@ body {
   stroke-linejoin: round;
 }
 
-.doodle .stroke-thin {
+.stroke-thin, .doodle .stroke-thin {
   fill: none;
   stroke: var(--line-soft);
   stroke-width: 1.6;
